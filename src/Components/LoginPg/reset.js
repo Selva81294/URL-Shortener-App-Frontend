@@ -42,7 +42,7 @@ const ForgotPassword = () => {
   const handleForgotPassword = async (event ) =>{
     event.preventDefault();
     try {
-      const res = await fetch("http://localhost:5000/forgotpassword", {
+      const res = await fetch("https://url-shortener-app-cubz.onrender.com/forgotpassword", {
         method: "POST", crossDomain: true,
         body: JSON.stringify({
           email,

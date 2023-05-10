@@ -19,7 +19,7 @@ const URLShortener = () => {
   const getAllURLData = async () => {
     try {
       await axios
-        .get("http://localhost:5000/shURl/geturl", {headers:{"x-auth-token": localStorage.getItem("token")}})
+        .get("https://url-shortener-app-cubz.onrender.com/shURl/geturl", {headers:{"x-auth-token": localStorage.getItem("token")}})
         .then((res) => setAllURlData(res.data));
     } catch (error) {
       console.log(error);
@@ -53,7 +53,7 @@ const URLShortener = () => {
       };
       try {
         await axios
-          .post("http://localhost:5000/shURL/posturl", newData, config)
+          .post("https://url-shortener-app-cubz.onrender.com/shURL/posturl", newData, config)
           .then((res) => console.log(res.data));
       } catch (error) {
         console.log(error);
@@ -117,10 +117,10 @@ const URLShortener = () => {
                   <h6>
                     Short-URL :{" "}
                     <a
-                      href={`http://localhost:5000/shURl/${data.shortURL}`}
+                      href={`https://url-shortener-app-cubz.onrender.com/shURl/${data.shortURL}`}
                       target="blank"
                     >
-                      http://localhost:5000/shURL/{data.shortURL}
+                      https://url-shortener-app-cubz.onrender.com/shURL/{data.shortURL}
                     </a>
                   </h6>
                   <h6>Long-URL : {data.longURL}</h6>
@@ -128,7 +128,7 @@ const URLShortener = () => {
                 </Card.Body>
                 <Card.Footer>
                 <a
-                    href={`http://localhost:5000/shURL/delete/${data._id}`}
+                    href={`https://url-shortener-app-cubz.onrender.com/shURL/delete/${data._id}`}
                     className="btn btn-sm btn-warning"
                   >
                     Remove

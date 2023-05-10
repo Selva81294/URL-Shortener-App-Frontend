@@ -54,7 +54,7 @@ const Login = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        "http://localhost:5000/signup",
+        "https://url-shortener-app-cubz.onrender.com/signup",
         {
           method: "POST",
           body: JSON.stringify({
@@ -81,7 +81,7 @@ const Login = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        "http://localhost:5000/login",
+        "https://url-shortener-app-cubz.onrender.com/login",
         {
           method: "POST",
           body: JSON.stringify({
